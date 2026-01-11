@@ -1,0 +1,108 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4b0000; /* Deep maroon */
+  color: white;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  max-width: 450px; /* increased from 300px */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-right: 2rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+.hero-scroll {
+  display: flex;
+  overflow-x: hidden; /* hide manual scrollbar */
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.hero-panel {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f5f0; /* Ivory for elegance */
+  color: #4b0000; /* Deep maroon text for harmony */
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(75, 0, 0, 0.7); /* maroon overlay */
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  background-color: rgba(75, 0, 0, 0.9);
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #4b0000; /* maroon active dot */
+}
