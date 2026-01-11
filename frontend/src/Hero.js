@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Hero.css";
 import authorImage from "./assets/author-hero.png";
 import bookImage from "./assets/truth-book.png";
+import eventImage from "./assets/Event-invite.png";
 
 function Hero() {
   const scrollRef = useRef(null);
@@ -21,7 +22,7 @@ function Hero() {
           behavior: "smooth",
         });
       }
-    }, 5000); // ✅ every 10 seconds
+    }, 5000); // every 5 seconds
 
     return () => clearInterval(interval);
   }, [isHovered, index]);
@@ -41,10 +42,10 @@ function Hero() {
       <section
         className="hero-scroll"
         ref={scrollRef}
-        onMouseEnter={() => setIsHovered(true)} // ✅ pause on hover
-        onMouseLeave={() => setIsHovered(false)} // ✅ resume on leave
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Author Panel */}
+        {/* Author Panel (first) */}
         <div className="hero-panel">
           <div className="hero-image">
             <img src={authorImage} alt="Vijaya Bharath Reddy" />
@@ -59,7 +60,23 @@ function Hero() {
           </div>
         </div>
 
-        {/* Book Panel */}
+        {/* Event Panel (second) */}
+        <div className="hero-panel">
+          <div className="hero-image">
+            <img src={eventImage} alt="Book Launch Invitation" />
+          </div>
+          <div className="hero-text">
+            <h1>
+              You're invited to the launch of <br />
+              <span style={{ fontStyle: "italic" }}>Truth</span>
+            </h1>
+            <p>12 January 2026 • 3:30 PM</p>
+            <p>New Delhi World Book Fair</p>
+            <p>— Vijaya Bharath Reddy Allavada</p>
+          </div>
+        </div>
+
+        {/* Book Panel (third) */}
         <div className="hero-panel">
           <div className="hero-image">
             <img src={bookImage} alt="Truth Book Cover" />
@@ -77,20 +94,20 @@ function Hero() {
       {/* Arrows */}
       <button
         className="arrow left"
-        onClick={() => scrollToPanel((index - 1 + 2) % 2)}
+        onClick={() => scrollToPanel((index - 1 + 3) % 3)} // ✅ use 3 panels
       >
         &#10094;
       </button>
       <button
         className="arrow right"
-        onClick={() => scrollToPanel((index + 1) % 2)}
+        onClick={() => scrollToPanel((index + 1) % 3)} // ✅ use 3 panels
       >
         &#10095;
       </button>
 
       {/* Dots */}
       <div className="dots">
-        {[0, 1].map((dotIndex) => (
+        {[0, 1, 2].map((dotIndex) => (
           <span
             key={dotIndex}
             className={`dot ${index === dotIndex ? "active" : ""}`}

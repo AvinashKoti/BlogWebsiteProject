@@ -1,0 +1,99 @@
+.author-page {
+  position: relative;
+}
+
+.author-banner {
+  background-image: url("./assets/post-hero-background.png"); /* ✅ use your spiritual background image */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax feel */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.author-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* overlay for readability */
+  z-index: 0;
+}
+
+.author-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 3rem;
+  max-width: 1100px;
+  align-items: center;
+}
+
+.author-image img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.author-text {
+  max-width: 600px;
+  color: #4b0000; /* maroon text */
+}
+
+.author-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #4b0000;
+  display: inline-block;
+}
+
+.author-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .author-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-image img {
+    margin-bottom: 2rem;
+  }
+}
+
+.who-section {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(
+    248,
+    245,
+    240,
+    0.9
+  ); /* ivory with slight transparency */
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  color: #4b0000; /* maroon text */
+  line-height: 1.8;
+}
+
+.who-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #4b0000;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // ✅ for separate pages
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "./assets/vbr-logo.png";
 
@@ -11,19 +11,16 @@ function Navbar() {
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="#hero">Home</a> {/* scroll to Hero */}
+          <Link to="/">Home</Link> {/* ✅ goes back to root */}
         </li>
         <li>
-          <Link to="/author">About</Link> {/* new Author page */}
+          <Link to="/author">About</Link>
         </li>
         <li>
-          <a href="#why">Why I Write</a> {/* scroll on home */}
+          <Link to="/books">Books</Link>
         </li>
         <li>
-          <Link to="/books">Books</Link> {/* new Books page */}
-        </li>
-        <li>
-          <a href="#contact">Contact</a> {/* scroll on home */}
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </nav>

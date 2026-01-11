@@ -41,18 +41,22 @@
   display: flex;
   overflow-x: hidden; /* hide manual scrollbar */
   scroll-snap-type: x mandatory;
-  width: 100%;
+  width: 80%;
 }
 
 .hero-panel {
-  flex: 0 0 100%;
+  flex: 0 0 100%; /* ✅ each panel takes full viewport width */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f5f0; /* Ivory for elegance */
-  color: #4b0000; /* Deep maroon text for harmony */
+  background-color: #f8f5f0; /* Ivory */
+  color: #4b0000; /* Maroon text */
   padding: 4rem 2rem;
   scroll-snap-align: start;
+}
+
+.hero-panel:nth-child(2) .hero-image img {
+  max-width: 300px; /* smaller size for event image */
 }
 
 .hero-wrapper {
@@ -63,14 +67,14 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(75, 0, 0, 0.7); /* maroon overlay */
-  color: white;
-  border: none;
-  padding: 1rem;
+  background: none; /* ✅ remove circle background */
+  color: #4b0000; /* ✅ maroon arrow symbol */
+  border: none; /* no border */
+  padding: 0; /* remove extra spacing */
   cursor: pointer;
   font-size: 2rem;
-  border-radius: 50%;
   z-index: 10;
+  transition: color 0.3s ease;
 }
 
 .arrow.left {
@@ -82,7 +86,7 @@
 }
 
 .arrow:hover {
-  background-color: rgba(75, 0, 0, 0.9);
+  color: #800000; /* slightly darker maroon on hover */
 }
 
 .dots {

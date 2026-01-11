@@ -1,0 +1,77 @@
+.books-page {
+  background-image: url("./assets/post-hero-background.png"); /* ✅ same spiritual background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.books-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* overlay for readability */
+  z-index: 0;
+}
+
+.books-banner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #4b0000;
+}
+
+.books-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.book-card {
+  background-color: rgba(248, 245, 240, 0.3); /* ivory card */
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.book-info h2 {
+  color: #4b0000;
+  margin-bottom: 1rem;
+}
+
+.book-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.buy-button {
+  background-color: #4b0000;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #800000;
+}

@@ -28,12 +28,14 @@
 }
 
 .navbar-links li a {
-  color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: ivory; /* ✅ keep original font color */
+  padding: 0.5rem 1rem;
+  border-radius: 6px; /* rounded box */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: #ffd700; /* Gold accent */
+  background-color: rgba(207, 194, 194, 0.1); /* ✅ subtle maroon tint box */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* ✅ soft shadow effect */
 }

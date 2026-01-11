@@ -1,7 +1,8 @@
 .about {
-  background-color: #f8f5f0; /* ivory background */
+  background-color: rgba(248, 245, 240, 0.45); /* ivory with 85% opacity */
   color: #4b0000; /* maroon text */
   padding: 4rem 2rem;
+  border-radius: 8px; /* optional: rounded edges for elegance */
 }
 
 .about-container {

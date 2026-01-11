@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import authorImage from "./assets/author-hero.png"; // reuse your author portrait
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -21,6 +22,10 @@ function About() {
             With a passion for literature and philosophy, he brings a unique
             voice that resonates with readers seeking meaning beyond convention.
           </p>
+          {/* ✅ Short link to dedicated Author page */}
+          <Link to="/author" className="read-more-link">
+            Read more about the Author →
+          </Link>
         </div>
       </div>
     </section>

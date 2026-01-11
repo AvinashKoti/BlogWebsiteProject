@@ -1,0 +1,75 @@
+.book-preview {
+  width: 100%;
+  background-color: rgba(248, 245, 240, 0.5); /* smoother transparent ivory */
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #4b0000;
+}
+
+.book-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(75, 0, 0, 0.6); /* softer underline */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.book-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.book-img {
+  max-width: 200px;
+  border-radius: 4px;
+  box-shadow: none; /* no heavy shadow */
+}
+
+.book-text {
+  max-width: 420px;
+  text-align: left;
+}
+
+.book-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.see-more {
+  font-weight: 500;
+  color: #800000;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.see-more:hover {
+  color: #4b0000;
+}

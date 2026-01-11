@@ -3,3 +3,28 @@ body {
   background-color: #f8f5f0; /* elegant ivory */
   font-family: "Playfair Display", serif;
 }
+.post-hero-background {
+  position: relative;
+  background-image: url("./assets/SpiritualBG.png"); /* replace with actual filename */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional parallax effect */
+  padding: 4rem 2rem;
+}
+
+.post-hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 0;
+}
+
+.post-hero-background > * {
+  position: relative;
+  z-index: 1;
+}
