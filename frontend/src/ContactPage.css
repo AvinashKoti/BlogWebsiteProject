@@ -1,0 +1,40 @@
+.contact-page {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.contact-page h1 {
+  color: #800000; /* maroon accent */
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  margin-top: 30px;
+}
+
+.contact-icon {
+  display: inline-block;
+  margin: 15px;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #d4af37; /* subtle gold hover */
+}
+
+.map-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

@@ -5,11 +5,11 @@ body {
 }
 .post-hero-background {
   position: relative;
-  background-image: url("./assets/SpiritualBG.png"); /* replace with actual filename */
+  background-image: url("./assets/SpiritualBG.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional parallax effect */
+  background-attachment: fixed; /*  parallax effect */
   padding: 4rem 2rem;
 }
 
@@ -27,4 +27,9 @@ body {
 .post-hero-background > * {
   position: relative;
   z-index: 1;
+}
+
+html,
+body {
+  overflow-x: hidden; /* stops left-right scroll */
 }

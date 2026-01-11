@@ -1,8 +1,12 @@
 .about {
-  background-color: rgba(248, 245, 240, 0.45); /* ivory with 85% opacity */
-  color: #4b0000; /* maroon text */
-  padding: 4rem 2rem;
-  border-radius: 8px; /* optional: rounded edges for elegance */
+  background-image: url("./assets/SpiritualBG.png"); /* adjust path */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax effect */
+  padding: 2rem 2rem;
+  min-height: 100vh; /* fills viewport */
+  box-sizing: border-box;
 }
 
 .about-container {
@@ -33,9 +37,10 @@
 }
 
 .about-text p {
+  display: inline-block;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {

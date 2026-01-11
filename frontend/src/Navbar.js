@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "./assets/Logo.png";
+import logo from "./assets/pagelogo.png";
 
 function Navbar() {
   return (
@@ -20,7 +20,7 @@ function Navbar() {
           <Link to="/books">Books</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
